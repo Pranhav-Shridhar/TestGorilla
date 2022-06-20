@@ -1,0 +1,28 @@
+<!-- What is microdata in HTML5 and how is it created?
+
+
+Microdata allows developers to define the custom semantics of elements and embed custom properties within the web page. 
+
+It’s used to provide browsers and search engines with more information about the contents of the web page so that they can display results that best match the user’s search intent.
+
+Microdata is created using the <itemscope> element. Information about the item is then specified using the <itemprop> element.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div itemscope>
+      <p>My name is <span itemprop="name">Zara</span>.</p>
+    </div>
+
+    <div itemscope>
+      <p>My name is <span itemprop="name">Nuha</span>.</p>
+    </div>
+  </body>
+</html>

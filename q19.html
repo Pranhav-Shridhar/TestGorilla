@@ -1,0 +1,43 @@
+<!-- What are some of the most important APIs in HTML5?
+
+
+HTML5 supports a wide range of APIs. Some of the most popular ones include:
+
+Geolocation API, used to identify the user’s location
+Web Speech API, which provides speech recognition functionality
+Clipboard API, which provides copy, cut, and paste functionality
+History API, which provides access to the browser navigation history
+Web Notifications API, used to send web-based notifications to users -->
+
+<!-- Geolocation API: -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>Click the button to get your coordinates.</p>
+
+    <button onclick="getLocation()">Try It</button>
+
+    <p id="demo"></p>
+
+    <script>
+      var x = document.getElementById("demo");
+
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+          x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+      }
+
+      function showPosition(position) {
+        x.innerHTML =
+          "Latitude: " +
+          position.coords.latitude +
+          "<br>Longitude: " +
+          position.coords.longitude;
+      }
+    </script>
+  </body>
+</html>

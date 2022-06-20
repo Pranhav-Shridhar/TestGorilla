@@ -1,0 +1,81 @@
+<!-- What are the new tags for multimedia in HTML5?
+
+
+Unlike previous versions, HTML5 allows developers to create multimedia objects without the need for additional plugins. The new tags that facilitate this are:
+
+<audio> - used to embed audio content
+<video> - used to embed video content
+<embed> - used to embed content from an external source
+<source> - used to embed multiple media resources
+<track> - used to specify text tracks (such as subtitles) for audio and video content -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      h1 {
+        color: green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <center>
+      <h1>GeeksforGeeks</h1>
+
+      <p>Audio Sample</p>
+
+      <!--- Autoplay ensure to run audio automatically
+			after running the program -->
+      <audio controls autoplay>
+        <source
+          src="https://media.geeksforgeeks.org/wp-content/uploads/20190531165842/Recording1514.ogg"
+          type="audio/ogg"
+        />
+
+        <source
+          src="https://media.geeksforgeeks.org/wp-content/uploads/20190531165842/Recording1514.mp3"
+          type="audio/mpeg"
+        />
+      </audio>
+    </center>
+
+    <center>
+      <h1>GeeksforGeeks</h1>
+
+      <p>Video Sample</p>
+
+      <video width="400" height="350" controls preload>
+        <source src="myvid.mp4" type="video/mp4" />
+        <source src="myvid.ogg" type="video/ogg" />
+      </video>
+    </center>
+
+    <center>
+      <h1>GeeksforGeeks</h1>
+
+      <p>Embed Sample</p>
+
+      <embed
+        src="https://media.geeksforgeeks.org/wp-content/uploads/20210723103530/simplescreesdfdsrecorder2021071.gif"
+        width="300px"
+        height="300px"
+      />
+    </center>
+
+    <center>
+      <h1>GeeksforGeeks</h1>
+      <h2>Track Tag: Both Audio and Video</h2>
+
+      <video width="300" height="300" controls>
+        <source src="myvid.mp4" type="video/mp4" />
+        <track
+          src="https://contribute.geeksforgeeks.org/wp-content/uploads/11.mp4"
+          kind="subtitle"
+          srclang="en"
+          label="English"
+        />
+      </video>
+    </center>
+  </body>
+</html>

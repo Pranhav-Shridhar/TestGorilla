@@ -1,0 +1,47 @@
+<!-- What are some of the new input types in HTML5?
+
+HTML5 introduces several new input types to create a more interactive user experience. The new input types include:
+
+Date, used to select a date from a drop-down calendar
+Time, used to enter a time
+Email, used to enter an email address
+Tel, used to enter a telephone number with a specific pattern
+Color, used to select a color from a color picker
+Range, used to select a range of values on a slider -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <label>Email</label>
+      <input type="email" id="email" name="email" />
+
+      <label>Phone</label>
+      <input type="tel" id="tel" name="tel" />
+      <label for="">time</label>
+      <input type="time" id="url" name="url" />
+      <label for="">Color</label>
+      <input type="color" name="age" id="age" min="1" max="10" step="2" />
+      <label for="">Range</label>
+      <label for="range">Choose a maximum house price: </label>
+      <input
+        type="range"
+        name="price"
+        id="price"
+        min="50000"
+        max="500000"
+        step="100"
+        value="250000"
+      />
+      <output class="price-output" for="price"></output>
+      <label for="">Date-Time</label>
+      <input type="datetime-local" name="datetime" id="datetime" />
+    </form>
+  </body>
+</html>

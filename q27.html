@@ -1,0 +1,43 @@
+<!-- How can HTML5 be used for data storage purposes?
+
+While HTML5 doesn’t include data storage functionality as part of its native specification, it’s possible to store data through the integration of data-related APIs. These can be used with HTML5 documents to manipulate client-side databases with SQL.
+
+The two HTML5 APIs for data storage and querying are:
+
+IndexedDB API, a standard maintained by the World Wide Web Consortium
+Web SQL Database, now considered deprecated -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const request = indexedDB.open("library");
+      let db;
+
+      request.onupgradeneeded = function () {
+        // The database did not previously exist, so create object stores and indexes.
+        const db = request.result;
+        const store = db.createObjectStore("books", { keyPath: "isbn" });
+        const titleIndex = store.createIndex("by_title", "title", {
+          unique: true,
+        });
+        const authorIndex = store.createIndex("by_author", "author");
+
+        // Populate with initial data.
+        store.put({ title: "Quarry Memories", author: "Fred", isbn: 123456 });
+        store.put({ title: "Water Buffaloes", author: "Fred", isbn: 234567 });
+        store.put({ title: "Bedrock Nights", author: "Barney", isbn: 345678 });
+      };
+
+      request.onsuccess = function () {
+        db = request.result;
+      };
+    </script>
+  </body>
+</html>

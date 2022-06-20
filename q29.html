@@ -1,0 +1,41 @@
+<!-- How is the Geolocation API implemented in HTML5?
+
+
+The HTML5 Geolocation API uses the device’s GPS, WiFi or mobile signal to triangulate the user’s latitude and longitude coordinates. The user must give their permission before geolocation services can be used on their device.
+
+From the developer’s point of view, the Geolocation API is implemented firstly by calling the geolocation.navigator object. Three methods are then used by the API to handle location data:
+
+getCurrentPosition identifies the device’s current location and returns a position object with data
+watchPosition returns a value whenever the device location changes
+clearWatch cancels the previous watchPosition call -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>Click the button to get your coordinates.</p>
+
+    <button onclick="getLocation()">Try It</button>
+
+    <p id="demo"></p>
+
+    <script>
+      var x = document.getElementById("demo");
+
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+          x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+      }
+
+      function showPosition(position) {
+        x.innerHTML =
+          "Latitude: " +
+          position.coords.latitude +
+          "<br>Longitude: " +
+          position.coords.longitude;
+      }
+    </script>
+  </body>
+</html>

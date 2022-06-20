@@ -1,0 +1,42 @@
+<!-- What are input elements in HTML5?
+
+
+Input elements are used to create interactive controls that receive and process information from the user. For example, inputs could be used to process login details, collect customer feedback, or display a form.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <label>Email</label>
+      <input type="email" id="email" name="email" />
+      <label>Search</label>
+      <input type="email" id="email" name="email" />
+      <label>Phone</label>
+      <input type="tel" id="tel" name="tel" />
+      <label for="">URL</label>
+      <input type="url" id="url" name="url" />
+      <label for="">Number</label>
+      <input type="number" name="age" id="age" min="1" max="10" step="2" />
+      <label for="">Slider</label>
+      <label for="price">Choose a maximum house price: </label>
+      <input
+        type="range"
+        name="price"
+        id="price"
+        min="50000"
+        max="500000"
+        step="100"
+        value="250000"
+      />
+      <output class="price-output" for="price"></output>
+      <label for="">Date-Time</label>
+      <input type="datetime-local" name="datetime" id="datetime" />
+    </form>
+  </body>
+</html>

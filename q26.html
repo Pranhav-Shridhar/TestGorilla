@@ -1,0 +1,47 @@
+<!-- What are the best audio and video formats to use in HTML5?
+
+HTML5 supports MP3, Ogg, WebM, ADTS, FLAC, and WAV audio formats. A WAV file is uncompressed and typically large, making it unsuitable. Each browser supports its own set of audio formats; MP3 is the only audio format that is currently compatible with all major browsers.
+
+In terms of video, HTML5 supports MP4, WebM, and Ogg formats. While MP4 is generally considered the recommended video format, not all browsers support it natively due to licensing issues. In these cases, WebM can be used as an alternative. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <h1>GeeksforGeeks</h1>
+
+      <p>Audio Sample</p>
+
+      <!--- Autoplay ensure to run audio automatically
+              after running the program -->
+      <audio controls autoplay>
+        <source
+          src="https://media.geeksforgeeks.org/wp-content/uploads/20190531165842/Recording1514.ogg"
+          type="audio/ogg"
+        />
+
+        <source
+          src="https://media.geeksforgeeks.org/wp-content/uploads/20190531165842/Recording1514.mp3"
+          type="audio/mpeg"
+        />
+      </audio>
+    </center>
+
+    <center>
+      <h1>GeeksforGeeks</h1>
+
+      <p>Video Sample</p>
+
+      <video width="400" height="350" controls preload>
+        <source src="myvid.mp4" type="video/mp4" />
+        <source src="myvid.ogg" type="video/ogg" />
+      </video>
+    </center>
+  </body>
+</html>
